@@ -1,3 +1,3 @@
-FROM centos8
+FROM centos
 ENTRYPOINT ["echo"]
 CMD ["Hello world!"]
