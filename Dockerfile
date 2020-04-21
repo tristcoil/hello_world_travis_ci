@@ -1,3 +1,8 @@
-FROM centos
-ENTRYPOINT ["echo"]
-CMD ["Hello world! new commit"]
+FROM debian
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends cowsay \
+    && rm -rf /var/lib/apt/lists/*
+ENV PATH "$PATH:/usr/games"
+
+ENTRYPOINT ["cowsay","-f","tux"]
+CMD ["Hello, World!"]
