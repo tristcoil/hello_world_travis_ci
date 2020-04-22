@@ -5,4 +5,4 @@ RUN apt-get update \
 ENV PATH "$PATH:/usr/games"
 
 ENTRYPOINT ["cowsay","-f","tux"]
-CMD ["docker workshop"]
+CMD ["Hello World!"]
